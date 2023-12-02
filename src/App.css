@@ -1,0 +1,12 @@
+#root {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.App {
+  height: max-content;
+  width: 100%;
+  background-color: whitesmoke;
+}
