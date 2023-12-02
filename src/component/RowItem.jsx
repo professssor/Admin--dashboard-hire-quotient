@@ -75,12 +75,22 @@ function RowItem({
           </>
         ) : (
           <>
-            <h3 className=" w-full"> {dummy ? "name" : name}</h3>
-            <h3 className=" w-full hidden  md:inline-flex ">
+            <h3 className={`w-full ${dummy ? "text-gray-400" : null}`}>
+              {" "}
+              {dummy ? "name" : name}
+            </h3>
+            <h3
+              className={` w-full hidden  md:inline-flex ${
+                dummy ? "text-gray-400" : null
+              } `}
+            >
               {" "}
               {dummy ? "email" : email}
             </h3>
-            <h3 className="w-full"> {dummy ? "role" : role}</h3>
+            <h3 className={`w-full ${dummy ? "text-gray-400" : null}`}>
+              {" "}
+              {dummy ? "role" : role}
+            </h3>
           </>
         )}
       </section>
@@ -91,7 +101,7 @@ function RowItem({
               onClick={() => {
                 setEdit(!edit);
               }}
-              className={`text-gray-400 mr-2    ${edit ? "hidden" : "null"} `}
+              className={`text-gray-400 mr-2 ${edit ? "hidden" : "null"} `}
             >
               {/* edit icon button */}
               <EditIcon className="hover:text-black " />
